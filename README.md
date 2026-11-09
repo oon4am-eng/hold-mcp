@@ -80,6 +80,6 @@ Found a wrong number or a holder merged with someone else? [Open an issue](../..
 
 ## Sources
 
-Filings: Financial Supervisory Service DART OpenAPI. Prices: Naver Finance. Website: [whohold.com](https://whohold.com).
+Filings: Financial Supervisory Service DART OpenAPI. Website: [whohold.com](https://whohold.com).
 
 This repository holds documentation only. The MIT license covers the docs and examples here; the whohold.com server code is not open source.
