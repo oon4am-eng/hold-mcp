@@ -1,6 +1,6 @@
 # Example prompts
 
-Results below were captured on 2026-11-08 and trimmed. Numbers change as new filings arrive.
+Results below were captured on 2026-11-08 and 2026-11-09 and trimmed. Numbers change as new filings arrive.
 
 ## Who controls a company, directly and indirectly
 
@@ -36,6 +36,18 @@ Results below were captured on 2026-11-08 and trimmed. Numbers change as new fil
 > Korean stocks where BlackRock holds over 5%
 
 `search_holder("블랙록")` finds the separate BlackRock entities that file in Korea (BlackRock Fund Advisors, BlackRock Institutional Trust Company, N.A., and others), each with its own `entity_id`. `get_portfolio` then lists what each one holds.
+
+## What actually happened in one filing
+
+> A fund took 21% of Bluemtec. Was it a market purchase, and at what price?
+
+`get_filing` with the filing's DART link or its 14-digit receipt number (`20261106000426`):
+
+| Trade date | Method | Shares | Price |
+|---|---|---|---|
+| 2026-10-30 | 장외매수 (off-market purchase) | +7,131,777 → 7,131,777 | ₩3,235 |
+
+The filing date is 2026-11-06, a week after the trade. `reports` shows the stake (21.07%, new) and the reason given in the filing; `members` lists each filer and special-relationship party.
 
 ## More to try
 
