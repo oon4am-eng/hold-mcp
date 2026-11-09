@@ -82,4 +82,4 @@ Found a wrong number or a holder merged with someone else? [Open an issue](../..
 
 Filings: Financial Supervisory Service DART OpenAPI. Prices: Naver Finance. Website: [whohold.com](https://whohold.com).
 
-This repository holds documentation only. The server runs at whohold.com.
+This repository holds documentation only. The MIT license covers the docs and examples here; the whohold.com server code is not open source.

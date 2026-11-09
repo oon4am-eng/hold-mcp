@@ -82,4 +82,4 @@ claude mcp add --transport http hold https://whohold.com/mcp
 
 공시: 금융감독원 DART OpenAPI. 가격: 네이버 금융. 웹사이트: [whohold.com](https://whohold.com).
 
-이 저장소는 사용 안내만 담고 있어요. 서버는 whohold.com에서 돌아가요.
+이 저장소는 사용 안내만 담고 있어요. MIT 라이선스는 이 저장소의 문서와 예시에만 적용되고, whohold.com 서버 코드는 공개하지 않아요.
