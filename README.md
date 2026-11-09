@@ -54,7 +54,8 @@ More in [examples/prompts.md](examples/prompts.md). You can ask in English. Hold
 | `get_holder_history` | Every ownership filing for a stock, with the actual trade date when the filing gives one |
 | `get_portfolio` | Everything one holder owns (default: NPS), ranked by stake |
 | `get_avg_cost` | Average purchase price, computed from the per-trade prices in the original filings |
-| `get_recent_changes` | Ownership filings from the last N days |
+| `get_recent_changes` | Ownership filings from the last N days, across all stocks or for one ticker |
+| `get_filing` | One filing in detail: each trade's date, method, shares before and after, and price |
 
 All tools are read-only.
 

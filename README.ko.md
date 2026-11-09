@@ -44,7 +44,7 @@ claude mcp add --transport http hold https://whohold.com/mcp
 
 예시는 [examples/prompts.md](examples/prompts.md)에 더 있어요.
 
-## 도구 7개
+## 도구 8개
 
 | 도구 | 내용 |
 |---|---|
@@ -54,7 +54,8 @@ claude mcp add --transport http hold https://whohold.com/mcp
 | `get_holder_history` | 종목의 지분 변동 공시 이력. 원문에 있으면 실제 거래일도 |
 | `get_portfolio` | 한 보유자가 가진 종목 전체 (기본 국민연금) |
 | `get_avg_cost` | 공시 원문의 취득 단가로 계산한 평균 매입단가 |
-| `get_recent_changes` | 최근 N일 변동 공시 |
+| `get_recent_changes` | 최근 N일 변동 공시. 종목 하나로 거를 수 있어요 |
+| `get_filing` | 공시 한 건의 세부 내역: 거래별 날짜, 방법, 변동 전후 수량, 단가 |
 
 모든 도구는 읽기 전용이에요.
 
