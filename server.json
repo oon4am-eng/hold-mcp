@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.oon4am-eng/hold",
+  "title": "HOLD! Korean stock ownership",
+  "description": "Who owns Korean listed stocks: 5% holders, insiders, NPS and average cost, from DART filings.",
+  "repository": { "url": "https://github.com/oon4am-eng/hold-mcp", "source": "github" },
+  "websiteUrl": "https://whohold.com/connect",
+  "version": "1.0.0",
+  "remotes": [{ "type": "streamable-http", "url": "https://whohold.com/mcp" }]
+}
