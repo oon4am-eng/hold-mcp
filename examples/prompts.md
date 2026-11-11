@@ -43,19 +43,6 @@ Results below were captured between 2026-11-08 and 2026-11-11 and trimmed. Numbe
 
 The largest moves come with it: 유한양행 (Yuhan) +1.11%p to 7.94%, 한화오션 (Hanwha Ocean) −1.02%p to 5.64%.
 
-## What institutions net-bought this week
-
-> Which stocks did institutions net-buy in the last 7 days?
-
-`get_institution_flows` adds up pension, asset-manager and financial-firm filings by stock:
-
-| | Stock | Amount | Institutions |
-|---|---|---|---|
-| Top net buy | 제일기획 (Cheil Worldwide) | ₩94.1B | 삼성자산운용 (Samsung Asset Management) |
-| Top net sell | STX | ₩915.8B | 한국산업은행 (KDB) |
-
-Only 5%+ and 1%+ insider filings are counted, so this is not exchange-wide institutional flow.
-
 ## A controlling family's combined stake
 
 > How much do Hyundai Motor's largest shareholder and its related parties own together?
