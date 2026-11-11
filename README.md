@@ -41,6 +41,8 @@ claude mcp add --transport http hold https://whohold.com/mcp
 - Korean stocks where BlackRock holds over 5%
 - What did Pan Ocean's largest shareholder pay per share?
 - Who indirectly owns Samsung Electronics through Samsung C&T and Samsung Life?
+- What did NPS buy and sell this month, and for how much?
+- Which stocks did institutions net-buy this week?
 
 More in [examples/prompts.md](examples/prompts.md). You can ask in English. Holder names come back as filed, usually in Korean, and your AI can translate them.
 
@@ -50,11 +52,13 @@ More in [examples/prompts.md](examples/prompts.md). You can ask in English. Hold
 |---|---|
 | `search_symbol` | Listed company by name or ticker |
 | `search_holder` | Holders by name. Typing 블랙록 finds the BlackRock entities. Same-name people and companies stay separate |
-| `get_holders` | Holders of 5%+ and insiders of 1%+ for one stock, plus indirect holders through other listed companies |
+| `get_holders` | Holders of 5%+ and insiders of 1%+ for one stock, indirect holders through other listed companies, and each controlling group with its members. Up to 10 stocks in one call |
 | `get_holder_history` | Every ownership filing for a stock, with the actual trade date when the filing gives one |
 | `get_portfolio` | Everything one holder owns (default: NPS), ranked by stake |
-| `get_avg_cost` | Average purchase price, computed from the per-trade prices in the original filings |
+| `get_avg_cost` | Average purchase price, computed from the per-trade prices in the original filings, and the paper return at the latest Friday close |
 | `get_recent_changes` | Ownership filings from the last N days, across all stocks or for one ticker |
+| `get_holder_summary` | What one holder (default: NPS) increased and decreased over N days, with amounts bought, sold and net |
+| `get_institution_flows` | Stocks that institutions net-bought and net-sold over N days, and the most active institutions |
 | `get_filing` | One filing in detail: each trade's date, method, shares before and after, and price |
 
 All tools are read-only.

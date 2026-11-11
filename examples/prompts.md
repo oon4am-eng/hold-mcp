@@ -1,6 +1,6 @@
 # Example prompts
 
-Results below were captured on 2026-11-08 and 2026-11-09 and trimmed. Numbers change as new filings arrive.
+Results below were captured between 2026-11-08 and 2026-11-11 and trimmed. Numbers change as new filings arrive.
 
 ## Who controls a company, directly and indirectly
 
@@ -30,6 +30,55 @@ Results below were captured on 2026-11-08 and 2026-11-09 and trimmed. Numbers ch
 > Every stock NPS cut in the last 7 days
 
 `get_recent_changes` with `holder: "국민연금"` returned 9 filings, 4 of them decreases. Each row carries the filing date, the trade date when given, and a DART link.
+
+## What NPS bought and sold this month
+
+> What did NPS buy and sell over the last 30 days, and for how much?
+
+`get_holder_summary` (default holder: NPS, `days: 30`) counts market trades only, so listings and debt-for-equity swaps are left out:
+
+| Increased | Decreased | Bought | Sold | Net |
+|---|---|---|---|---|
+| 2 stocks | 14 stocks | ₩56.9B | ₩486.4B | −₩429.5B |
+
+The largest moves come with it: 유한양행 (Yuhan) +1.11%p to 7.94%, 한화오션 (Hanwha Ocean) −1.02%p to 5.64%.
+
+## What institutions net-bought this week
+
+> Which stocks did institutions net-buy in the last 7 days?
+
+`get_institution_flows` adds up pension, asset-manager and financial-firm filings by stock:
+
+| | Stock | Amount | Institutions |
+|---|---|---|---|
+| Top net buy | 제일기획 (Cheil Worldwide) | ₩94.1B | 삼성자산운용 (Samsung Asset Management) |
+| Top net sell | STX | ₩915.8B | 한국산업은행 (KDB) |
+
+Only 5%+ and 1%+ insider filings are counted, so this is not exchange-wide institutional flow.
+
+## A controlling family's combined stake
+
+> How much do Hyundai Motor's largest shareholder and its related parties own together?
+
+`get_holders` (ticker `005380`) returns `groups` with each member:
+
+| Group | Combined | Members |
+|---|---|---|
+| 현대모비스 (Hyundai Mobis) | 30.67% | 현대모비스 22.36%, 정몽구 5.57%, 정의선 2.73%, and one more |
+
+Pass `tickers` (up to 10) to compare several stocks in one call.
+
+## Paper return on a holder's average cost
+
+> What return is Capital Group sitting on in SK hynix?
+
+`get_avg_cost` (ticker `000660`) now carries the latest Friday close and `return_pct`:
+
+| Holder | Average cost | Close (2026-11-06) | Return |
+|---|---|---|---|
+| TheCapitalGroupCompanies,Inc. | ₩209,434 | ₩1,176,000 | +461.5% |
+
+The return covers only the shares bought with a price in the filings; dividends and gains already taken on sells are not included.
 
 ## Find a foreign institution by its Korean name
 
